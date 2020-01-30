@@ -26,7 +26,7 @@
     max-width: 1280px;
     max-height: 500px;
     margin: 0 auto;
-    padding: 64px;
+    padding: 0 64px;
     box-sizing: content-box;
     overflow:hidden;
 }
@@ -44,7 +44,7 @@
     top: 0;
     left: 0;
     height: 100%;
-    max-height: 564px;
+    max-height: 500px;
     width: 100%;
     display: flex;
     flex-direction: column;
@@ -203,16 +203,16 @@ li.dj-nav-bar__item:hover:before {
     color: #414141;
 }
 
-.dj-speaker-card:nth-of-type(4n-3)  .dj-speaker-card__image-wrp {
+.dj-speaker-card:nth-of-type(5n-4)  .dj-speaker-card__image-wrp {
     border-color: #4285f4;
 }
-.dj-speaker-card:nth-of-type(4n-2) .dj-speaker-card__image-wrp {
+.dj-speaker-card:nth-of-type(5n-3) .dj-speaker-card__image-wrp {
     border-color: #ea4235;
 }
-.dj-speaker-card:nth-of-type(4n-1) .dj-speaker-card__image-wrp {
+.dj-speaker-card:nth-of-type(5n-2) .dj-speaker-card__image-wrp {
     border-color: #fbbc04;
 }
-.dj-speaker-card:nth-of-type(4n) .dj-speaker-card__image-wrp {
+.dj-speaker-card:nth-of-type(5n-1) .dj-speaker-card__image-wrp, .dj-speaker-card:nth-of-type(5n) .dj-speaker-card__image-wrp {
     border-color: #34a853;
 }
 .dj-speaker-card:nth-of-type(4n-3)  {
@@ -244,4 +244,5 @@ li.dj-nav-bar__item:hover:before {
 #show-all-speakers-btn{
     background: transparent;
     border: 2px solid #4385f4;
+    box-shadow: none;
 }
