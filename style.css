@@ -1,0 +1,241 @@
+
+.when-where{
+    margin: auto;
+    max-width: 1280px;
+    box-sizing: content-box;
+    padding: 24px 64px;
+}
+.ww-item {
+    display: inline-block;
+    margin: 0 8px;
+    font-size: 18px;
+    color: #202124;
+}
+.icon {
+    margin-right: 5px;
+    height: 1.2em;
+    padding-top: .1em;
+    vertical-align: top;
+}
+.icon-fill {
+    stroke: #202124;
+    fill: #202124;
+}
+
+/* Responsive Video Hero */
+.hero-wrap {
+    max-width: 1280px;
+    max-height: 500px;
+    margin: 0 auto;
+    padding: 64px;
+    box-sizing: content-box;
+    overflow:hidden;
+}
+.video-wrap{
+    position: relative;
+    top:0;
+    left:0;
+    padding-bottom: 56.25%;
+    width: 100%;
+    height: 0;
+    overflow: hidden;
+}
+.video-overlay{
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    max-height: 564px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    color: white;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(0,0,0,0.3);
+    text-align: center;
+}
+#video-overlay-h1{
+    color: white;
+    font-size: 72px;
+    line-height: 1;
+    margin: 0 0 .25em;
+    font-family: 'Google Sans', Roboto, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+}
+#video-overlay-p{
+    font-size: 18px;
+    font-weight: 500;
+    font-family: Roboto, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+}
+#hero-video {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: auto;
+    /* prevent controls / video info showing on hover. this would need to be set to 'auto' in circumstances requiring user interaction */
+    pointer-events: none;
+}
+@media (max-width: 500px){
+    .hero-wrap{
+        padding: 24px;
+    }
+    #video-overlay-h1{
+        font-size: 26px;
+    }
+    #video-overlay-p{
+        font-size: 16px;
+    }
+}
+div.display-none{
+    display: none;
+}
+
+#tools{
+    position: fixed;
+    z-index:1;
+    bottom: 2px;
+    right: 2px;
+    background: white;
+    border-radius: 3px;
+    padding: 3px;
+    box-shadow: 0 1px 0 0 #dadce0,0 2px 6px 0 rgba(0,0,0,.12);
+    display: flex;
+    align-items: flex-end;
+}
+#tools input, #tools button{
+    display: block;
+    margin: 4px;
+    font-family: Roboto, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+    font-size: 14px;
+    border: 1px solid #cccccc;
+    border-radius: 2px;
+}
+#tools p{
+margin-bottom: 4px;
+}
+
+/* Nav links */
+.dj-header__top-bar-logo{
+    position: relative;
+    z-index: 1;
+}
+li.dj-nav-bar__item:after {
+    left: -20px;
+    top: 12px;
+    z-index: -1;
+    border-radius: 50%;
+    position: absolute;
+    height: 40px;
+    width: 40px;
+    content: "";
+}
+li.dj-nav-bar__item:before {
+    left: 4px;
+    top: 12px;
+    z-index: -2;
+    border-radius: 0 20px 20px 0;
+    position: absolute;
+    height: 40px;
+    width: 0%;
+    transition: width 0s;
+    content: "";
+}
+li.dj-nav-bar__item:hover:before {
+    transition: width .3s;
+    width: calc(100% + 16px);
+}
+
+
+.dj-nav-bar__item:nth-of-type(4n-3):hover:after  {
+    background-color: #D2E3FC;
+}
+.dj-nav-bar__item:nth-of-type(4n-2):hover:after {
+    background-color: #FAD2CF;
+}
+.dj-nav-bar__item:nth-of-type(4n-1):hover:after {
+    background-color: #FEEFC3;
+}
+.dj-nav-bar__item:nth-of-type(4n):hover:after {
+    background-color: #CEEAD6;
+}
+.dj-nav-bar__item:nth-of-type(4n-3):hover:before  {
+    background-color: #D2E3FC;
+}
+.dj-nav-bar__item:nth-of-type(4n-2):hover:before {
+    background-color: #FAD2CF;
+}
+.dj-nav-bar__item:nth-of-type(4n-1):hover:before {
+    background-color: #FEEFC3;
+}
+.dj-nav-bar__item:nth-of-type(4n):hover:before {
+    background-color: #CEEAD6;
+}
+
+/* Speaker Cards */
+.dj-speaker-card {
+    border-radius: 17%/50%;
+    background-color: transparent;
+    border: none;
+    display: flex;
+    align-items: center;
+    padding: 0;
+}
+.dj-speaker-card:before {
+    display: none;
+}
+.dj-speaker-card:after {
+    display: none;
+}
+
+.dj-speaker-card__image-wrp {
+    padding-bottom: 33%;
+    width: 33%;
+    border-radius: 50%;
+    border-width: 4px;
+    border-style: solid;
+    flex-basis: 33%;
+}
+
+.dj-speaker-card__info {
+    flex: 0 0 66%;
+    padding: 0 0 0 12px;
+}
+.dj-speaker-card__name{
+    color: #414141;
+}
+
+.dj-speaker-card:nth-of-type(4n-3)  .dj-speaker-card__image-wrp {
+    border-color: #4285f4;
+}
+.dj-speaker-card:nth-of-type(4n-2) .dj-speaker-card__image-wrp {
+    border-color: #ea4235;
+}
+.dj-speaker-card:nth-of-type(4n-1) .dj-speaker-card__image-wrp {
+    border-color: #fbbc04;
+}
+.dj-speaker-card:nth-of-type(4n) .dj-speaker-card__image-wrp {
+    border-color: #34a853;
+}
+.dj-speaker-card:nth-of-type(4n-3)  {
+    background-color: #D2E3FC;
+}
+.dj-speaker-card:nth-of-type(4n-2) {
+    background-color: #FAD2CF;
+}
+.dj-speaker-card:nth-of-type(4n-1) {
+    background-color: #FEEFC3;
+}
+.dj-speaker-card:nth-of-type(4n) {
+    background-color: #CEEAD6;
+}
+
+@media(min-width:1024px){
+    .dj-speaker-card:nth-of-type(8n), .dj-speaker-card:nth-of-type(8n-1), .dj-speaker-card:nth-of-type(8n-2), .dj-speaker-card:nth-of-type(8n-3){
+        flex-direction: row-reverse;
+    }
+}
+@media(max-width:1023.9px){
+    .dj-speaker-card:nth-of-type(4n), .dj-speaker-card:nth-of-type(4n-1){
+        flex-direction: row-reverse;
+    }
+}
