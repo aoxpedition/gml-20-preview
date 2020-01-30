@@ -1,4 +1,3 @@
-
 .when-where{
     margin: auto;
     max-width: 1280px;
@@ -238,4 +237,11 @@ li.dj-nav-bar__item:hover:before {
     .dj-speaker-card:nth-of-type(4n), .dj-speaker-card:nth-of-type(4n-1){
         flex-direction: row-reverse;
     }
+}
+
+/* Icons */ 
+
+#show-all-speakers-btn{
+    background: transparent;
+    border: 2px solid #4385f4;
 }
