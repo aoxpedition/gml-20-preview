@@ -120,29 +120,29 @@ margin-bottom: 4px;
     z-index: 1;
 }
 li.dj-nav-bar__item:after {
-    left: -20px;
+    left: -10px;
     top: 12px;
     z-index: -1;
-    border-radius: 50%;
+    border-radius: 20px;
     position: absolute;
     height: 40px;
     width: 40px;
     content: "";
 }
 li.dj-nav-bar__item:before {
-    left: 4px;
+    left: -10px;
     top: 12px;
     z-index: -2;
-    border-radius: 0 20px 20px 0;
+    border-radius: 20px;
     position: absolute;
     height: 40px;
-    width: 0%;
+    width: 40px;
     transition: width 0s;
     content: "";
 }
 li.dj-nav-bar__item:hover:before {
     transition: width .3s;
-    width: calc(100% + 16px);
+    width: calc(100% + 20px);
 }
 
 
