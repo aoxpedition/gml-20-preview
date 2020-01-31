@@ -81,8 +81,6 @@
     top: 0;
     width: 100%;
     height: auto;
-    /* prevent controls / video info showing on hover. this would need to be set to 'auto' in circumstances requiring user interaction */
-    pointer-events: none;
 }
 
 @media (max-width: 500px) {
@@ -230,6 +228,10 @@ li.dj-nav-bar__item:hover:before {
 
 .dj-nav-bar__item:nth-of-type(4n):hover:before {
     background-color: #CEEAD6;
+}
+
+.dj-header__cta .dj-button {
+    border-radius: 24px;
 }
 
 /*  CIRCLE CLOCK */
