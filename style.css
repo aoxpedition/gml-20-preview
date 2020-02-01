@@ -4,6 +4,8 @@
     max-width: 1280px;
     box-sizing: content-box;
     padding: 0 64px 24px;
+    justify-content: space-between;
+    align-items: center;;
 }
 
 .ww-item {
@@ -30,7 +32,7 @@
 .hero-wrap {
     max-width: 1280px;
     max-height: 500px;
-    margin: 32px auto;
+    margin: 64px auto;
     padding: 0 64px;
     box-sizing: content-box;
     overflow: hidden;
@@ -124,7 +126,7 @@ div.display-none {
 }
 
 #ww.align-left{
-    display: block;
+    display: flex;
 }
 
 #tools {
@@ -235,6 +237,18 @@ li.dj-nav-bar__item:hover:before {
 }
 
 /*  CIRCLE CLOCK */
+#cc-sm h3{
+    font-size: 12px;
+}
+#cc-sm h3:first-child{
+    font-size: 15px;
+}
+.time-wrap{
+    margin-right: 8px;
+}
+.time-wrap div, .time-wrap svg{
+    overflow: visible;
+}
 .center-clock {
     box-sizing: content-box;
     margin: auto;
@@ -270,6 +284,9 @@ li.dj-nav-bar__item:hover:before {
 }
 
 .progress-dot {
+    transform-origin: 30px;
+}
+.progress2-dot {
     transform-origin: 60px;
 }
 
@@ -428,6 +445,9 @@ li.dj-nav-bar__item:hover:before {
     background-color: #CEEAD6;
 }
 
+div.dj-speakers-wrapper div.dj-speaker-cards div.dj-speaker-card:nth-of-type(1n){
+    background-color: transparent;
+}
 
 @media(max-width:1023.9px) {
     .dj-speaker-card:nth-of-type(4n-3) .dj-speaker-card__image-wrp {
@@ -467,6 +487,6 @@ li.dj-nav-bar__item:hover:before {
 
 #show-all-speakers-btn {
     background: transparent;
-    border: 2px solid #4385f4;
+    border: 3px solid #4385f4;
     box-shadow: none;
 }
