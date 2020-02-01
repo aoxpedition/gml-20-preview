@@ -1,33 +1,3 @@
-.when-where {
-    display: none;
-    margin: -24px auto auto;
-    max-width: 1280px;
-    box-sizing: content-box;
-    padding: 0 64px 24px;
-    justify-content: space-between;
-    align-items: center;;
-}
-
-.ww-item {
-    display: inline-block;
-    margin: 0 8px;
-    font-size: 18px;
-    font-weight: 500;
-    color: #202124;
-}
-
-.icon {
-    margin-right: 5px;
-    height: 1.2em;
-    padding-top: .1em;
-    vertical-align: top;
-}
-
-.icon-fill {
-    stroke: #202124;
-    fill: #202124;
-}
-
 /* Responsive Video Hero */
 .hero-wrap {
     max-width: 1280px;
@@ -85,9 +55,30 @@
     height: auto;
 }
 
+.when-where {
+    display: none;
+    /* display: flex when visible */
+    margin: auto;
+    max-width: 1280px;
+    box-sizing: content-box;
+    padding: 0 64px 24px;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.ww-item {
+    display: inline-block;
+    margin: 0 8px;
+    font-size: 18px;
+    font-weight: 500;
+    color: #202124;
+}
+
+
 @media (max-width: 500px) {
     .hero-wrap {
-        padding: 24px;
+        margin: 32px auto;
+        padding: 0 24px;
     }
 
     #video-overlay-h1 {
@@ -96,6 +87,17 @@
 
     #video-overlay-p {
         font-size: 16px;
+    }
+
+    .when-where{
+        flex-direction: column;
+        padding: 0 24px 24px;
+    }
+
+    .ww-item{
+        margin-bottom: 24px;
+        font-size: 16px;
+        text-align: center;
     }
 }
 
@@ -312,7 +314,8 @@ li.dj-nav-bar__item:hover:before {
 }
 
 @media (max-width: 500px) {
-    .flex-center {
+
+    .flex-center:not(#cc-sm) {
         flex-direction: column;
         align-items: center;
     }
@@ -487,6 +490,6 @@ div.dj-speakers-wrapper div.dj-speaker-cards div.dj-speaker-card:nth-of-type(1n)
 
 #show-all-speakers-btn {
     background: transparent;
-    border: 3px solid #4385f4;
+    border: 4px solid #4385f4;
     box-shadow: none;
 }
