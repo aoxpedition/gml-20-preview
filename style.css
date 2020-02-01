@@ -306,6 +306,10 @@ li.dj-nav-bar__item:hover:before {
     }
 }
 
+/* Value props */
+.dj-image-container--circle{
+    width: 350px;
+}
 
 /* Speaker Cards */
 .dj-speaker-card {
