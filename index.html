@@ -4799,7 +4799,7 @@
                     document.getElementById('ww').classList.remove('align-left')
                     document.getElementById('input-h1').value = "Marketing Live 2020"
                     updateText()
-                    document.getElementById('countdown-2').style.display = 'block';
+                    document.getElementById('countdown-2').classList.remove('display-none-desktop')
 
                 } else if (document.getElementsByClassName('video-overlay')[0].classList.contains('align-left')) {
                     document.getElementsByClassName('video-overlay')[0].classList.add('align-top')
@@ -4808,7 +4808,7 @@
                     document.getElementById('input-h1').value = "Marketing<br>Live 2020"
                     updateText()
                     document.getElementById('ww').classList.add('align-left')
-                    document.getElementById('countdown-2').style.display = 'none';
+                    document.getElementById('countdown-2').classList.add('display-none-desktop')
                 }
 
             }
