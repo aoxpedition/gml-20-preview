@@ -326,8 +326,18 @@ li.dj-nav-bar__item:hover:before {
 }
 
 /* Value props */
+
+.dj-content>.dj-section:nth-of-type(2) {
+    padding: 60px 0 100px 0;
+}
+
 .dj-image-container--circle{
     width: 350px;
+}
+@media (max-width: 500px) {
+    .dj-content>.dj-section:nth-of-type(2) {
+        padding: 30px 0 60px 0;
+    }
 }
 
 /* Speaker Cards */
