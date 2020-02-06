@@ -2,8 +2,8 @@
 .hero-wrap {
     max-width: 1280px;
     max-height: 500px;
-    margin: 64px auto;
-    padding: 0 64px;
+    margin: 32px auto;
+    padding: 0 24px;
     box-sizing: content-box;
     overflow: hidden;
 }
@@ -30,21 +30,21 @@
     color: white;
     justify-content: center;
     align-items: center;
-    background-color: rgba(0, 0, 0, 0.3);
+    background-color: rgba(0, 0, 0, 0.45);
     text-align: center;
 }
 
 #video-overlay-h1 {
     color: white;
-    font-size: 72px;
+    font-size: 26px;
     line-height: 1;
     margin: 0 0 .25em;
     font-family: 'Google Sans', Roboto, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
 }
 
 #video-overlay-p {
-    font-size: 18px;
-    font-weight: 500;
+    font-size: 13px;
+    font-weight: 400;
     font-family: Roboto, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
 }
 
@@ -61,44 +61,20 @@
     margin: auto;
     max-width: 1280px;
     box-sizing: content-box;
-    padding: 0 64px 24px;
+    padding: 0 8px 24px;
     justify-content: space-between;
     align-items: center;
 }
 
 .ww-item {
     display: inline-block;
-    margin: 0 8px;
-    font-size: 18px;
+    margin: 0 8px 24px 8px;
+    font-size: 16px;
     font-weight: 500;
     color: #202124;
+    text-align: center;
 }
 
-@media (max-width: 500px) {
-    .hero-wrap {
-        margin: 32px auto;
-        padding: 0 24px;
-    }
-
-    #video-overlay-h1 {
-        font-size: 26px;
-    }
-
-    #video-overlay-p {
-        font-size: 16px;
-    }
-
-    .when-where{
-        flex-direction: column;
-        padding: 0 24px 24px;
-    }
-
-    .ww-item{
-        margin-bottom: 24px;
-        font-size: 16px;
-        text-align: center;
-    }
-}
 
 div.display-none {
     display: none;
@@ -128,6 +104,48 @@ div.display-none {
 
 #ww.align-left{
     display: flex;
+    flex-direction: column;
+}
+
+.dj-masthead__brandstrip{
+    display: none;
+}
+
+/* hero above mobile */
+@media (min-width: 601px){
+    .hero-wrap {
+        margin: 64px auto;
+        padding: 0 64px;
+    }
+    #video-overlay-h1 {
+        font-size: 5.75vw;
+    }
+    #video-overlay-p {
+        font-size: 2.5vw;
+        font-weight: 500;
+    }
+    .when-where{
+        flex-direction: row;
+        padding: 0 24px 24px;
+    }
+    .ww-item {
+        font-size: 18px;
+        text-align: left;
+        margin: 0 8px;
+    }
+    #ww.align-left{
+        flex-direction: row;
+    }
+}
+
+/* hero large/desktop */
+@media (min-width: 1024px){
+    #video-overlay-h1 {
+        font-size: 72px;
+    }
+    #video-overlay-p {
+        font-size: 32px;
+    }
 }
 
 #tools {
@@ -162,10 +180,6 @@ div.display-none {
     top: 16px;
     position: relative;
     z-index: 1;
-}
-
-.dj-header__nav-bar-content {
-    padding-left: 124px;
 }
 
 .dj-header__top-bar-logo img {
@@ -237,6 +251,12 @@ li.dj-nav-bar__item:hover:before {
     border-radius: 24px;
 }
 
+@media(min-width: 601px){
+    .dj-header__nav-bar-content {
+        padding-left: 124px;
+    }
+}
+
 /*  CIRCLE CLOCK */
 #cc-sm h3{
     font-size: 12px;
@@ -264,19 +284,16 @@ li.dj-nav-bar__item:hover:before {
     text-align: center;
 }
 
+.flex-center:not(#cc-sm){
+    flex-direction: column;
+    align-items: center;
+}
+
 .col-sm-full {
     display: flex;
     margin-bottom: 8px;
 }
 
-.col-sm-full:first-child {
-    justify-content: flex-end;
-
-}
-
-.col-sm-full:last-child {
-    justify-content: flex-start;
-}
 
 .progress-ring__circle {
     transition: stroke-dashoffset 0.35s;
@@ -312,17 +329,28 @@ li.dj-nav-bar__item:hover:before {
     transform: translate(-50%, -50%);
 }
 
-@media (max-width: 500px) {
-
-    .flex-center:not(#cc-sm) {
-        flex-direction: column;
-        align-items: center;
-    }
 
     .flex-center .col-sm-full {
         width: 100%;
         justify-content: space-around;
     }
+
+
+@media (min-width: 601px){
+    .flex-center:not(#cc-sm) {
+        flex-direction: row;
+        align-items: center;
+    }
+
+    .col-sm-full:first-child {
+        justify-content: flex-end;
+    
+    }
+    
+    .col-sm-full:last-child {
+        justify-content: flex-start;
+    }
+
 }
 
 /* Value props */
