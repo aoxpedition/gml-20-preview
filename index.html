@@ -124,8 +124,10 @@
     <link rel="shortcut icon" sizes="32x32" href="https://marketinglive.withgoogle.com/favicon.ico">
     <link rel="icon" sizes="128x128" href="https://marketinglive.withgoogle.com/google_favicon_128.png">
     <link rel="apple-touch-icon" sizes="128x128" content="https://marketinglive.withgoogle.com/google_favicon_128.png">
-
     <link href="./theme.css" rel="stylesheet">
+
+    <!-- custom styles -->
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300|Roboto+Condensed&display=swap" rel="stylesheet">
     <link href="./style.css" rel="stylesheet">
 
 
@@ -160,12 +162,12 @@
                     </video>
                     <div class="video-overlay">
                         <h1 id="video-overlay-h1">Marketing Live 2020</h1>
-                        <p id="video-overlay-p">June 1-3 | Moscone South Convention Center</p>
+                        <p id="video-overlay-p">June 1-3 | Moscone Center South</p>
                     </div>
                 </div>
             </div>
             <div id="ww" class="when-where">
-                <p id="ww-p" class="ww-item">June 1-3 | Moscone South Convention Center</p>
+                <p id="ww-p" class="ww-item">June 1-3 | Moscone Center South</p>
                 <div id="cc-sm" class="flex-center">
                     
                         <div class="time-wrap">
@@ -226,7 +228,7 @@
                 <div>
                     <p>Overlay controls</p>
                     <input id="input-h1" type="text" oninput="updateText()" value="Marketing Live 2020">
-                    <input id="input-p" type="text" oninput="updateText()" value="June 1-3 | Moscone South Convention Center.">
+                    <input id="input-p" type="text" oninput="updateText()" value="June 1-3 | Moscone Center South">
                 </div>
                 <div>
                     <button type='button' onclick="toggleOverlay()">On/Off</button>
@@ -4839,8 +4841,8 @@
                 circles[i].style.strokeDasharray = `${circumference} ${circumference}`
                 circles[i].style.strokeDashoffset = `${circumference}`
             }
-
-            const eventDate = new Date("Jun 1, 2020 09:00:00").getTime();
+            // event date Jun 1 2020 9:00 AM (PDT GMT-7:00)
+            const eventDate = new Date(1591027200000).getTime();
             const countdown = setInterval(function () {
                 const now = new Date().getTime();
                 const distance = eventDate - now;
