@@ -305,7 +305,7 @@ li.dj-nav-bar__item:hover:before {
 }
 
 .dj-speaker-card__image-wrp {
-    padding-bottom: 33%;
+    padding-bottom: calc(33% - 8px);
     width: 33%;
     border-radius: 50%;
     border-width: 4px;
@@ -320,6 +320,7 @@ li.dj-nav-bar__item:hover:before {
 
 .dj-speaker-card__name {
     color: #414141;
+    font-size: 22px;
 }
 
 
